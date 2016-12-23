@@ -160,7 +160,7 @@ verify (NMSetting *setting, NMConnection *connection, GError **error)
 
 	if (priv->parent) {
 		if (   !nm_utils_is_uuid (priv->parent)
-		    && !nm_utils_iface_valid_name (priv->parent)) {
+		    && !nm_utils_iface_name_is_valid (priv->parent, NULL)) {
 			g_set_error (error,
 			             NM_CONNECTION_ERROR,
 			             NM_CONNECTION_ERROR_INVALID_PROPERTY,

@@ -2233,7 +2233,7 @@ verify_label (const char *label)
 	if (!p)
 		return FALSE;
 	iface = g_strndup (label, p - label);
-	if (!nm_utils_iface_valid_name (iface)) {
+	if (!nm_utils_iface_name_is_valid (iface, NULL)) {
 		g_free (iface);
 		return FALSE;
 	}

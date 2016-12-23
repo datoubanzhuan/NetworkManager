@@ -3683,7 +3683,7 @@ nm_utils_ifname_cpy (char *dst, const char *name)
 	g_return_if_fail (dst);
 	g_return_if_fail (name && name[0]);
 
-	nm_assert (nm_utils_iface_valid_name (name));
+	nm_assert (nm_utils_iface_name_is_valid (name, NULL));
 
 	if (g_strlcpy (dst, name, IFNAMSIZ) >= IFNAMSIZ)
 		g_return_if_reached ();

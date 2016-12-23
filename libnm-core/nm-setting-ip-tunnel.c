@@ -322,7 +322,7 @@ verify (NMSetting *setting, NMConnection *connection, GError **error)
 	}
 
 	if (   priv->parent
-	    && !nm_utils_iface_valid_name (priv->parent)
+	    && !nm_utils_iface_name_is_valid (priv->parent, NULL)
 	    && !nm_utils_is_uuid (priv->parent)) {
 		g_set_error (error,
 		             NM_CONNECTION_ERROR,
