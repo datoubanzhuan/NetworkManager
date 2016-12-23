@@ -177,6 +177,7 @@ gboolean    nm_utils_hwaddr_matches   (gconstpointer hwaddr1,
 char *nm_utils_bin2hexstr (gconstpointer src, gsize len, int final_len);
 GBytes *nm_utils_hexstr2bin (const char *hex);
 
+NM_DEPRECATED_IN_1_6_FOR(nm_utils_iface_name_is_valid)
 gboolean    nm_utils_iface_valid_name (const char *name);
 NM_AVAILABLE_IN_1_6
 gboolean    nm_utils_iface_name_is_valid (const char *name, GError **error);
